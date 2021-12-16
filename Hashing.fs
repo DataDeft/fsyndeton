@@ -7,7 +7,6 @@ open System.Data.HashFunction.xxHash
 module Hashing =
 
 
-
     let xxHasher =
         let config =
             new xxHashConfig (HashSizeInBits = 64, Seed = 1337UL)
