@@ -21,4 +21,5 @@ module Hashing =
     let getHashedValueBytes (xxHasher: IxxHash) (inp: byte) = xxHasher.ComputeHash(inp).AsHexString()
 
 
-    let getHashedValueSpanBytes (xxHasher: IxxHash) (inp: Span<byte>) = xxHasher.ComputeHash(inp.ToArray()).AsHexString()
+    let getHashedValueSpanBytes (xxHasher: IxxHash) (inp: Span<byte>) =
+        xxHasher.ComputeHash(inp.ToArray()).AsHexString()

@@ -11,7 +11,6 @@ open System.Collections.Generic
 module Main =
 
 
-
     let logger (s: string) =
         System.Console.WriteLine(sprintf "%s %s" (DateTime.Now.ToString Config.dateTimeFormat) s)
 
@@ -42,11 +41,13 @@ module Main =
             try
                 let fileStat =
                     UnixFileSystemInfo.GetFileSystemEntry(pathEntry)
+
                 let isRegular = fileStat.IsRegularFile
 
                 if isRegular then
                     use f =
                         System.IO.File.Open(pathEntry, FileMode.Open)
+
                     if f.CanRead then
 
                         // while canread
