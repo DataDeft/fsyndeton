@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+
+    <AssemblyName>Fsyndenton</AssemblyName>
+    <RootNamespace>DataDeft.Lambda</RootNamespace>
+
+    <OutPutType>Exe</OutPutType>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+	  <ImplicitUsings>enable</ImplicitUsings>
+    <PublishTrimmed>true</PublishTrimmed>
+	  <PublishReadyToRun>true</PublishReadyToRun>
+    <AssemblyName>fsyndenton</AssemblyName>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Cli.fs" />
+    <!-- config -->
+    <Compile Include="Config.fs" />
+    <!-- lib -->
+    <Compile Include="Hashing.fs" />
+    <Compile Include="Utils.fs" />
+    <!-- main -->
+    <Compile Include="Main.fs" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FSharp.Data" Version="4.2.6" />
+    <PackageReference Include="System.Data.HashFunction.xxHash" Version="2.0.0" />
+    <PackageReference Include="Mono.Unix" Version="7.1.0-final.1.21458.1" />
+  </ItemGroup>
+
+</Project>
